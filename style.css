@@ -1,0 +1,401 @@
+@charset "UTF-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+@font-face {
+	font-family: Glegoo, Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: #303030;
+
+    background-position: top;
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    /* background-image: url(images/background/GrayBackground.jpg) no-repeat center center fixed; */
+    /* background-image: '' */
+    /* background: black; */
+	/* background-position: top;
+	font-size: 22px;
+	height: 4700px; */
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+span {
+	color: #5bebf1;
+}
+
+.indent {
+}
+
+.center {
+	text-align: center;
+}
+
+img::selection {
+	background-color: #e05253;
+}
+
+div::selection {
+	background-color: #e05253;
+}
+
+p::selection {
+	background-color: #e05253;
+}
+
+span::selection {
+	background-color: #e05253;
+}
+
+h1::selection {
+	background-color: #e05253;
+}
+
+h2::selection {
+	background-color: #e05253;
+}
+
+a:link {
+	color: #5bebf1;
+}
+
+a:hover {
+	color: #4ec4c8;
+}
+
+a:active {
+	color: white;
+}
+
+a:visited {
+	color: #5bebf1;
+}
+
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 96%;
+	padding-left: 2%;
+	padding-right: 2%;
+	background-image: url(/web/20180815104533im_/http://briansplacebarbershop.com/images/Brian%27s-Place-2.0.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+}
+.next-button {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	margin-top: 60px;
+	text-align: center;
+}
+.section {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 80%;
+	padding-left: 10%;
+	padding-right: 10%;
+	display: block;
+	font-family: Glegoo, Arial, Helvetica, sans-serif;
+	color: white;
+	margin-top: 50px;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin-top: 50px;
+}
+.price-list {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	margin-top: 50px;
+	width: 100%;
+	display: block;
+	color: white;
+	text-align: center;
+	font-family: Glegoo, Arial, Helvetica, sans-serif;
+}
+#creator {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	color: white;
+	font-family: Glegoo, Arial, Helvetica, sans-serif;
+	text-align: center;
+	margin-top: 50px;
+	font-size: 16px;
+}
+#icon {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	text-align: center;
+	padding-bottom: 30px;
+}
+#facebook {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	text-align: center;
+	color: white;
+	font-family: Glegoo, Arial, Helvetica, sans-serif;
+	margin-top: 50px;
+}
+
+.small {
+	font-size: 15px;
+}
+
+.medium {
+	font-size: 18px;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 95.55%;
+	padding-left: 1.225%;
+	padding-right: 1.225%;
+}
+.next-button {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+.section {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	color: white;
+	margin-top: 50px;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	text-align: center;
+}
+.price-list {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+#creator {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	color: white;
+	font-family: Glegoo, Arial, Helvetica, sans-serif;
+	text-align: center;
+	margin-top: 50px;
+	font-size: 16px;
+}
+#icon {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	text-align: center;
+	padding-bottom: 30px;
+}
+#facebook {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	text-align: center;
+	color: white;
+	font-family: Glegoo, Arial, Helvetica, sans-serif;
+	margin-top: 50px;
+}
+
+.small {
+	font-size: 22px;
+}
+
+.medium {
+	font-size: 32px;
+}
+
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 88.2%;
+	max-width: 1232px;
+	padding-left: 0.9%;
+	padding-right: 0.9%;
+	margin: auto;
+}
+.next-button {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	margin-top: 60px;
+	width: 100%;
+	display: block;
+}
+.section {
+	clear: both;
+	margin-left: 0;
+	margin-top: 50px;
+	width: 60%;
+	padding-left: 20%;
+	padding-right: 20%;
+	display: block;
+	color: white;
+}
+#header {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	text-align: center;
+	margin-top: 50px;
+}
+.price-list {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	margin-top: 50px;
+	width: 100%;
+	display: block;
+	color: white;
+	font-family: Glegoo;
+	text-align: center;
+}
+#creator {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	color: white;
+	font-family: Glegoo, Arial, Helvetica, sans-serif;
+	text-align: center;
+	margin-top: 50px;
+	font-size: 16px;
+}
+#icon {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+	text-align: center;
+	padding-bottom: 30px;
+}
+#facebook {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	margin-bottom: 40px;
+	width: 100%;
+	display: block;
+	color: white;
+	text-align: center;
+	font-family: Glegoo, Arial, Helvetica, sans-serif;
+	margin-top: 50px;
+}
+
+.small {
+	font-size: 22px;
+}
+
+.medium {
+	font-size: 32px;
+}
+
+}
+/*
+     FILE ARCHIVED ON 10:45:33 Aug 15, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:32:49 Apr 05, 2020.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  exclusion.robots: 0.13
+  load_resource: 130.588
+  PetaboxLoader3.resolve: 72.568
+  esindex: 0.015
+  RedisCDXSource: 0.592
+  LoadShardBlock: 54.602 (3)
+  CDXLines.iter: 25.35 (3)
+  captures_list: 87.151
+  PetaboxLoader3.datanode: 57.859 (4)
+  exclusion.robots.policy: 0.121
+*/
